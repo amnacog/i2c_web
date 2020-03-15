@@ -114,7 +114,7 @@ class LCDPrinter:
             return
         self.processing = True
         queueSize = len(self.queue)
-        if (queueSize > -1):
+        if (queueSize > 0):
             for idx, item in enumerate(self.queue):
                 waitFactor = 60
                 waitQuickFactor = 10
@@ -173,7 +173,7 @@ class LCDPrinter:
                             time.sleep(1)
                             x += 1
                 self.lcd.lcd_clear()
-            self.lcd.backlight(0)
+            self.lcd.backlight(0 if len(self.queue) == 0 else 1)
         self.processing = False
 
     def queueMessage(self, message):
