@@ -1,5 +1,6 @@
 # i2c_web
-simple i2c (lcd 16x2) displayer for IoT purposes
+
+### simple i2c (lcd 16x2) displayer for IoT purposes
 
 - You can either send payloads to display to either http or an mqtt broker
 - The second line can be scrollable if `scrollable` gets a `true` (soft limit 40 chars)
@@ -13,3 +14,6 @@ Syntax Usage:
   "scrollable": true
 }
 ```
+
+## Demo
+![](demo.gif)
